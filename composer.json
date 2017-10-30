@@ -1,0 +1,19 @@
+{
+  "name": "lance/php_identify",
+  "description": "用以生成随机数据，方便测试，例如人的身份证,电话年龄等",
+  "license": "lance",
+  "authors": [
+    {
+      "name": "lance",
+      "email": "296769589@qq.com"
+    }
+  ],
+  "require": {
+    "php": ">=5.4.0"
+  },
+  "autoload":{
+    "psr-4":{
+        "php_identify\\libs\\":"libs/"
+    }
+  }
+}
