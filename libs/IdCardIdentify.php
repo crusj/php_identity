@@ -18,10 +18,6 @@
         protected $o_decorate;
         const NAME = '身份证';
 
-        public function __construct(Identify $o_person) {
-            $this->o_decorate = $o_person;
-        }
-
         function calc_suffix_d($base) {
             if (strlen($base) <> 17) {
                 die('Invalid Length');

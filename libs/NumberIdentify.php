@@ -17,9 +17,6 @@
     {
         protected $o_decorate;
         const NAME = "电话";
-        public function __construct(Identify $o_person) {
-            $this->o_decorate = $o_person;
-        }
         public function set(){
             $mobileSegment = [
                 '134', '135', '136', '137', '138', '139', '150', '151', '152', '157', '130', '131', '132', '155', '186', '133', '153', '189',

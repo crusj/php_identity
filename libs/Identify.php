@@ -24,7 +24,8 @@
         }
 
         //装饰
-        public function decorate() {
+        public function decorate(Identify $o_person) {
+            $this->o_decorate = $o_person;
             $this->set();
         }
 

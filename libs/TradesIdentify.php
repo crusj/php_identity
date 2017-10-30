@@ -17,9 +17,6 @@
     {
         protected $o_decorate;
         const NAME = "行业";
-        public function __construct(Identify $o_person) {
-            $this->o_decorate = $o_person;
-        }
         public function set(){
             $a_data = [
                 "会计" => [
