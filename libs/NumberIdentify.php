@@ -16,7 +16,7 @@
     class NumberIdentify extends Identify
     {
         protected $o_decorate;
-        const NAME = "电话";
+        protected $s_name = "电话";
         public function set(){
             $mobileSegment = [
                 '134', '135', '136', '137', '138', '139', '150', '151', '152', '157', '130', '131', '132', '155', '186', '133', '153', '189',
@@ -24,6 +24,6 @@
             $prefix = $mobileSegment[array_rand($mobileSegment)];
             $middle = mt_rand(2000, 9000);
             $suffix = mt_rand(2000, 9000);
-            $this->o_decorate->a_msg[self::NAME] = $prefix.$middle.$suffix;
+            $this->o_decorate->a_msg[$this->s_name] = $prefix.$middle.$suffix;
         }
     }

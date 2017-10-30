@@ -16,9 +16,9 @@
     class SexIdentify extends Identify
     {
         protected $o_decorate;
-        const NAME = "性别";
+        protected $s_name="性别";
         public function set() {
             $a_sex = ["男","女"];
-            $this->o_decorate->a_msg[self::NAME] = $a_sex[array_rand($a_sex)];
+            $this->o_decorate->a_msg[$this->s_name] = $a_sex[array_rand($a_sex)];
         }
     }

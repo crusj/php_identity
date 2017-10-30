@@ -16,7 +16,7 @@
     class TradesIdentify extends Identify
     {
         protected $o_decorate;
-        const NAME = "行业";
+        protected $s_name='行业';
         public function set(){
             $a_data = [
                 "会计" => [
@@ -41,7 +41,7 @@
             ];
             $s_trade = array_rand($a_data);
             $s_carer = $a_data[$s_trade][array_rand($a_data[$s_trade])];
-            $this->o_decorate->a_msg[self::NAME] = $s_trade.'/'.$s_carer;
+            $this->o_decorate->a_msg[$this->s_name] = $s_trade.'/'.$s_carer;
 
         }
     }

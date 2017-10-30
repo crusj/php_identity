@@ -17,7 +17,12 @@
     {
         protected $a_msg      = [];//装饰信息
         protected $o_decorate = NULL;
-        const NAME ="parent";
+        protected $s_name ="parent";
+        public function __construct($s_name = '') {
+            if(!empty($s_name)){
+                $this->s_name = $s_name;
+            }
+        }
 
         protected function set() {
 
@@ -31,8 +36,8 @@
 
         public function get(array &$a_container) {
             if ($this->o_decorate instanceof Identify):
-                $a_container = array_merge($a_container,$this->o_decorate->a_msg);
                 $this->o_decorate->get($a_container);
+                $a_container = array_merge($a_container,$this->o_decorate->a_msg);
             endif;
         }
 

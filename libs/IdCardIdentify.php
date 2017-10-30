@@ -16,7 +16,7 @@
     class IdCardIdentify extends Identify
     {
         protected $o_decorate;
-        const NAME = '身份证';
+        protected $s_name = '身份证号';
 
         function calc_suffix_d($base) {
             if (strlen($base) <> 17) {
@@ -350,6 +350,6 @@
                 $base = $Region[$seed] . $Birth_format . $suffix_a . $suffix_b . $suffix_c;
 
             $content .= $base . $this->calc_suffix_d($base);
-            $this->o_decorate->a_msg[self::NAME] = $content;
+            $this->o_decorate->a_msg[$this->s_name] = $content;
         }
     }
