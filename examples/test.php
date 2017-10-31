@@ -17,6 +17,8 @@
     $o_trades = new \php_identify\libs\TradesIdentify();
     $o_character = new \php_identify\libs\CharacterIdentify();
     $o_hobby = new \php_identify\libs\HobbyIdentify();
+    $o_depart = new \php_identify\libs\DepartmentIdentify();
+    $o_account = new \php_identify\libs\AccountIdentify();
 
     //开始装饰
     $o_name->decorate($o_person);
@@ -27,8 +29,10 @@
     $o_trades->decorate($o_idCard);
     $o_character->decorate($o_trades);
     $o_hobby->decorate($o_character);
+    $o_depart->decorate($o_hobby);
+    $o_account->decorate($o_depart);
     echo '<pre>';
     $a_container = [];
-    $o_hobby->get($a_container);
+    $o_account->get($a_container);
     var_dump($a_container);
     echo '</pre>';
