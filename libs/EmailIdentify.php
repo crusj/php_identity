@@ -26,7 +26,7 @@
             $a_tail = [
                 '163','qq','sina','git'
             ];
-            $s_tail = $a_tail(array_rand($a_tail));
+            $s_tail = $a_tail[array_rand($a_tail)];
 
             $this->o_decorate->a_msg[$this->s_name] = $s_head.'@'.$s_tail.'.com';
         }
